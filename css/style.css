@@ -1,0 +1,15 @@
+header
+{background-color: blue;}
+
+
+
+#principal
+{background-color: #8CBDE6;}
+
+#secundario
+{background-color: #60A6E0;}
+
+
+
+#principal, #secundario
+{padding: 10px;}
