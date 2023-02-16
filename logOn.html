@@ -25,22 +25,22 @@
         <title>Curriculum Vitae</title>
     </head>
     <div class="contenedor">
-        <div id="logOn">
+        <div id="formulario">
             <div class="mb-5 row">
-                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="email" value="email@example.com">
+                    <input type="email" class="form-control" id="inputEmail" value="email@example.com">
                 </div>
             </div>
             <div class="mb-5 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
                 <div class="col-sm-6">
                     <input type="password" class="form-control" id="inputPassword">
                 </div>
             </div>
             <div class="mb-5 row">
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                    <button type="submit" class="btn btn-primary mb-3" onclick="return validar(this.form)">Ingresar</button>
                 </div>
             </div>
 
