@@ -1,0 +1,19 @@
+.contenedor
+{   
+    max-width: 1600px;
+    height: 900px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logOn
+{
+    width: 50%;
+    line-height: 60px;
+}
