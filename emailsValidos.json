@@ -2,21 +2,9 @@
   "emails": [
     {
 	  "id": 1,			
-      "email": "jmanuel.armburen@gmail.com",
+      "email": "jmanuel.aramburen@gmail.com",
       "password": "0123456789",
 	  "nomyape": "Juan Manuel Aramburen"
-    },
-    {
-      "id": 2,
-      "mail": "mrodriguez@yahoo.com",
-      "password": "9786543210",
-	  "nomyape": "Mariela Rodriguez"
-    },
-    {
-      "id": 3,
-      "email": "malcantara@outlook.com.ar",
-      "password": "a1b2c3d4e5f6",
-	  "nomyape": "Maximo Alcantara"
     }
   ]
 }
