@@ -5,39 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <title>Curriculum Vitae</title>
 </head>
 <body>
     <header>
-        <h1 id="postulante"></h1>
+        <div class="datos">
+            <h1 id="postulante"></h1>
+            <h2>Analista Financiero</h1>
+        
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Experiencia</a></li>
+                    <li><a href="#">Idiomas</a></li>
+                    <li><a href="#">Otros conocimientos</a></li>
+                </ul>
+            </nav>     
+            
+        </div>
+        <div id="imagen"></div>
     </header>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sobre mi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Experiencia</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Idiomas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Otros Conocimientos</a>
-            </li>
-        </ul>
-    </div>
-  
+
     <div class="row">
-        <div class="col-sm-8 mb-8 sm-12" id="principal">
+        <div id="principal">
             <div id="sobreMi">
                 <h4>Sobre mi</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-primary">Aceptar</button>
             </div>
             <div id="experiencia">
                 <h4>Experiencia</h4>
@@ -59,44 +55,37 @@
                         <li>Verificación de procedimientos, protocolos y normas.</li>
                     </ul>
                 </div>
-                <div>
-                    <button class="btn btn-primary">Editar</button>
-                    <button class="btn btn-primary">Agregar</button>
-                    <button class="btn btn-primary">Aceptar</button>
-                </div>
-    
             </div>
         </div>
-        <div class="col-sm-4 mb-4 sm-12" id="secundario">
+        <div id="secundario">
             <div id="idiomas">
                 <h2>Idiomas</h2>
                 <ul>
                     <li>Ingles</li>
                     <li>Portugues</li>
-                    <div>
-                        <button class="btn btn-primary">Editar</button>
-                        <button class="btn btn-primary">Agregar</button>
-                        <button class="btn btn-primary">Aceptar</button>
-                    </div>
+          
                 </ul>
             </div>
         <div id="otrosConocimientos">
             <h2>Otros Conocimientos</h2>
-            <div>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-primary">Agregar</button>
-                <button class="btn btn-primary">Aceptar</button>
-            </div>
+            <ul>
+                <li>Concimiento 1</li>
+                <li>Concimiento 2</li>
+                <li>Concimiento 3</li>
+                <li>Concimiento 4</li>
+            </ul>
         </div>
-        
-        
-
-
     </div>
     <footer>
-
+        <ul>
+            <li><i class="fa-sharp fa-solid fa-at" id="correoElectronico"></i></li>
+            <li><<i class="fa-thin fa-mobile-retro" id="celular"></i></li>
+            <li><i class="fa-regular fa-location-dot" id="direccion"></i></li>
+        </ul>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/06bdbdcbab.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
