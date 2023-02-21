@@ -1,46 +1,81 @@
 var peticion;
 var datos;
-var postulante;
-var imagen;
-var correo;
-var celular;
-var direccion;
-var parametros;
+var emails = [];
+var exprecionReg;
+var valido;
+var contrasena;
+var nombreApellido = [];
+var correoElectronico;
+var mensaje = 'Debe ingresar';
 
-
-//Carga los datos que estan en el JSON
-peticion = new XMLHttpRequest();
-peticion.open('GET','https://randomuser.me/api/');
+function validar(formulario) {
+    //Validacion de la correo
+    if( formulario.inputEmail.value ){
+    
+        //Expresion regular del correo
+          exprecionReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+          valido = exprecionReg.test(formulario.inputEmail.value);
+          if(valido==false){
+            alert('Correo invalido. Ingrese correctamente el correo electronico');
+          }
+        
+        }else{
+          mensaje = mensaje + ' un correo electronico,'
+      }  
+  
+          //Carga los datos que estan en el JSON
+          peticion = new XMLHttpRequest();
+          peticion.open('GET','http://127.0.0.1:5500/emailsValidos.json');
          
-peticion.onload = function(){
+          peticion.onload = function(){
+            
+              if( peticion.status == 200 ){
+            
+                  //Guarda el resultado en variables
+                  datos = JSON.parse(peticion.response);
+            
+                  datos.emails.forEach(function(element){
+                      emails.push(element);  
+                  });
+      
+      console.log("valor")
+                  emails.forEach(function(element){
+                    console.log(element)
+                      if(element.email == formulario.inputEmail.value && element.password == formulario.inputPassword.value){
+                  
+                          nombreApellido = element.nomyape;
+                          correoElectronico = formulario.inputEmail.value;
+                      }
+  
+                  });
 
-    if( peticion.status == 200 ){
+                  
 
-        //Guarda el resultado en variables
-        datos = JSON.parse(peticion.response);
+                  console.log("valor")
+                  console.log(nombreApellido)
 
-        postulante = document.getElementById('postulante');
-        postulante.innerHTML = datos.results[0].name.first + " " + datos.results[0].name.last;  
+                  if(nombreApellido.length > 0){
+                    //alert("link")
+                    //location.href
+                    window.location.href = "curriculum.html?email=${correoElectronico}"
+                } else{
+                  alert("1")
+                }
+            
 
-        imagen = document.getElementById('imagen');
-        imagen.innerHTML =  `<img src="${datos.results[0].picture.large}" alt="Problemas al cargar">`;
+      
+              }  
+          };
+          peticion.send();  
 
-        parametros =  new URLSearchParams(window.location.search);
-        correo = document.getElementById('correoElectronico');
-        correo.innerHTML = parametros.get('email');
+          
 
-        //Celular
-        celular = document.getElementById('celular');
-        celular.innerHTML =  datos.results[0].cell;   
-
-        //Direccion
-        direccion = document.getElementById('direccion');
-        direccion.innerHTML =  datos.results[0].location.street.number + "  " + datos.results[0].location.street.name + " , " + datos.results[0].location.city; 
-    }  
-};
-peticion.send();  
-
-
+         
+            alert("finalizado")
+         
+    
+   
+}
 
 
 

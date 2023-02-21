@@ -2,8 +2,9 @@
   "emails": [
     {
 	  "id": 1,			
-      "email": "prueba.email@email.com",
+      "email": "correo.prueba@gmail.com",
       "password": "0123456789",
+	    "nomyape": "Juan Manuel Aramburen"
     }
   ]
 }

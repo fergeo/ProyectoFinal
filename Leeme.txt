@@ -1,0 +1,2 @@
+* Se puso solamente una cuenta para veficar solo a fines practicos.
+* Se utilizo dos manera de obtener datos de un json. Una para utilizar la API sugerida y otra de forma locarl.

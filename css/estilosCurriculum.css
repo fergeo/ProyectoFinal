@@ -1,0 +1,137 @@
+body
+{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+header
+{
+    background-color: #908461;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+.nav-links
+{
+    list-style: none;
+}
+
+.nav-links li
+{
+    display: inline-block;
+    padding: 0 20ox;
+}
+
+.nav-links li:hover
+{
+    transform: scale(1.1);
+}
+
+.nav-links a
+{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.nav-links a:hover
+{
+    color: #ffbc0e;
+}
+
+h2, h4
+{
+    border-bottom: 1px solid silver;
+}
+
+#principal
+{
+    background-color: #fff2d1;
+    height: 600px;
+    width: 70%;
+    border-right: 1px solid silver;
+}
+
+#sobreMi, #experiencia
+{
+    padding-left: 10px;
+}
+
+#secundario
+{
+    background-color: #fff2d1;
+    height: 600px;
+    width: 30%;
+}
+
+
+
+footer
+{
+    background-color: #908461;
+    height: 200px;
+}
+
+ul
+{
+    list-style-type: none;
+    padding: 10px;
+}
+
+li
+{
+   padding: 10px;
+   display: flex;
+}
+
+.icono
+{
+    width: 3%;
+}
+
+#correoElectronico, #celular, #direccion
+{
+    width: 90%;
+}
+
+@media(max-width:768px)
+{
+    header
+    {
+        display: block;
+        height: 500px;
+    }
+
+    .nav-links li
+    {
+        display: block;
+    }
+
+    #principal
+    {
+        height: 800px;
+    }
+ 
+    #secundario
+    {
+        height: 450px;
+    }
+
+    #datos, #imagen, #principal, #secundario
+    {
+        width: 100%;
+    }
+}
+
+@media(max-width:400px)
+{
+    #correoElectronico, #celular, #direccion
+    {
+        font-size: 80%;
+    }
+}
