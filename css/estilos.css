@@ -4,24 +4,20 @@ body
     border: 0;
     font-family: 'Lora', serif;
     background: #fffbef;
-    height: 100vh;
+    height: 900px;
 }
 
 #formulario
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 700px;
+{   
+    margin: auto;
+    margin-top: 250px;
+    width: 50%;
     background: #999079;
     border-radius: 5px;
-    
 }
 
 #formulario form
 {
-    padding: 0 40px;
     box-sizing: border-box;
 }
 
@@ -38,32 +34,31 @@ body
     margin-right: 20px;
 }
 
+.boton
+{
+    text-align: center;
+}
+
 #formulario button
 {
     width: 80%;
     height: 50px;
     border: 1px;
     background: #666050;
-    border-radius: 25px;
-}
-
-.boton
-{
-    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 25px;
     font-family: 'EB Garamond', serif;
     color:white;
 }
 
-
-@media(min-width:768px)
+@media(max-width:768px)
 {
     #formulario
-        {
-            margin: auto;
-            width: 500px;
-            margin-top: 150px;
-            border-radius: 5px;
-        }
+    {
+        margin-top: 250;
+        width: 70%;
+    }
+
 }
+   
