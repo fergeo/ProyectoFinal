@@ -59,7 +59,7 @@ function validar(formulario) {
   } else {
     alert(mensaje)  
   }
-  alert("finalizado")
+  alert(" ")
 }
 
 
